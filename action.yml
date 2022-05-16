@@ -1,0 +1,12 @@
+name: "ESP32 Rust Build"
+description: "Build Rust ESP32 projects"
+author: "Philip"
+inputs:
+  command:
+    required: true
+    description: "Command to run"
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.command }}
